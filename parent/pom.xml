@@ -7,11 +7,14 @@
     <groupId>com.dusk</groupId>
     <artifactId>cms</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>cloud-api-commons</module>
         <module>cloud-provider-payment8001</module>
     </modules>
+
     <packaging>pom</packaging>
+
 
     <!-- 统一管理jar包版本 -->
     <properties>
@@ -91,7 +94,6 @@
                 <version>${lombok.version}</version>
                 <optional>true</optional>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
