@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-
     <groupId>com.dusk</groupId>
     <artifactId>cms</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -13,9 +12,8 @@
 
     <modules>
         <module>cloud-api-commons</module>
-        <module>cloud-provider-payment8001</module>
+        <module>cloud-user-8001</module>
     </modules>
-
 
 
     <!-- 统一管理jar包版本 -->
