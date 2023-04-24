@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="generator.mapper.UserMapper">
+<mapper namespace="com.dusk.user.mapper.UserMapper">
 
-    <resultMap id="BaseResultMap" type="generator..User">
+    <resultMap id="BaseResultMap" type="com.dusk.user.domain.User">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="loginName" column="login_name" jdbcType="VARCHAR"/>
@@ -17,4 +17,27 @@
         id,name,login_name,
         password,create_time,modify_time
     </sql>
+
+    <select id="getById" resultType="com.dusk.user.domain.User">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="getByLoginName" resultType="com.dusk.user.domain.User">
+        select * from user where status = 1 and login_name = #{loginName}
+    </select>
+
+    <select id="getRoleSetByUserId" resultType="com.dusk.user.domain.Role">
+        select r.* from user_role ur
+          left join role r on ur.role_id = r.id
+        where r.status = 1 and ur.user_id=#{userId}
+    </select>
+
+    <select id="getPermissionSetByUserId" resultType="com.dusk.user.domain.Permission">
+        select p.* from user u
+          left join user_role ur on u.id = ur.user_id
+          left join role r on ur.role_id = r.id
+          left join role_permission rp on r.id = rp.role_id
+          left join permission p on rp.permission_id = p.id
+        where r.status = 1 and p.status = 1 and  u.id = #{userId}
+    </select>
 </mapper>

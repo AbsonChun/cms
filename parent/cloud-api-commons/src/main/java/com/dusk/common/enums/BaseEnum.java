@@ -1,6 +1,4 @@
-package com.dusk.cms.enums;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
+package com.dusk.common.enums;
 
 public interface BaseEnum<T> {
 

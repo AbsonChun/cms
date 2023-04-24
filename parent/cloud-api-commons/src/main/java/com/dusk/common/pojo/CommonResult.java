@@ -1,4 +1,4 @@
-package com.dusk.cms.pojo;
+package com.dusk.common.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

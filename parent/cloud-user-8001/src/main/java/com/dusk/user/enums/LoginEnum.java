@@ -1,7 +1,6 @@
 package com.dusk.user.enums;
 
-import com.dusk.cms.enums.BaseEnum;
-import com.sun.org.apache.bcel.internal.classfile.Code;
+import com.dusk.common.enums.BaseEnum;
 
 /**
  * 登录枚举
