@@ -51,7 +51,7 @@ public class Article implements Serializable {
     private Integer type;
 
     /**
-     * 文章表
+     *
      */
     private String author;
 

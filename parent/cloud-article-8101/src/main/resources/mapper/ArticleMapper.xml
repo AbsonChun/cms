@@ -24,4 +24,25 @@
         type,author,create_user,
         create_time,modify_time
     </sql>
+
+
+    <select id="getArticleById" resultMap="BaseResultMap">
+        select a.*,u.name as author from article a LEFT JOIN user u on a.create_user = u.id
+        where a.id = #{id}
+        <if test="type != null">
+            and a.type = #{type}
+        </if>
+        <if test="type == 3"><!-- type=3时是私密的贴 -->
+            and a.create_user = #{user_id}
+        </if>
+    </select>
+
+    <select id="getArticleListByStatusAndPageNum" resultType="com.dusk.article.domain.Article">
+        select * from article a where  a.status = #{status} limit #{pageNum},#{pageCount}
+    </select>
+
+    <insert  id="saveArticleEdit" useGeneratedKeys="true" keyProperty="id" parameterType="com.dusk.article.domain.Article">
+        insert into article(title,keyword,content,click,status,type,create_user,create_time,modify_time)
+          values(#{title},#{keyword},#{content},#{click},#{status},#{type},#{createUser},now(),now())
+    </insert >
 </mapper>
