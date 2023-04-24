@@ -1,9 +1,9 @@
 package com.dusk.user.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.dusk.cms.domain.RoadInfo;
-import com.dusk.cms.mapper.RoadInfoMapper;
-import com.dusk.cms.service.RoadInfoService;
+import com.dusk.user.domain.RoadInfo;
+import com.dusk.user.mapper.RoadInfoMapper;
+import com.dusk.user.service.RoadInfoService;
 import org.springframework.stereotype.Service;
 
 

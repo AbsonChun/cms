@@ -1,7 +1,7 @@
 package com.dusk.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.dusk.cms.domain.StandardLine;
+import com.dusk.user.domain.StandardLine;
 
 /**
  *

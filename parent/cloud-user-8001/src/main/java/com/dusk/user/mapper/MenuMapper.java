@@ -1,7 +1,7 @@
 package com.dusk.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.dusk.cms.domain.Menu;
+import com.dusk.user.domain.Menu;
 
 /**
  * @Entity generator..Menu

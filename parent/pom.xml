@@ -27,6 +27,7 @@
         <mysql.version>5.1.4</mysql.version>
         <druid.version>1.1.21</druid.version>
         <mybatis-plus.spring.boot.version>3.5.1</mybatis-plus.spring.boot.version>
+        <lang3.version>3.8.1</lang3.version>
     </properties>
 
     <!-- 子模块继承之后，提供作用：锁定版本+子module不用写groupId和version  -->
@@ -93,6 +94,11 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${lang3.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,7 +1,7 @@
 package com.dusk.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.dusk.cms.domain.Permission;
+import com.dusk.user.domain.Permission;
 
 /**
  *

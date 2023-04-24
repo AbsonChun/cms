@@ -1,7 +1,7 @@
 package com.dusk.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.dusk.cms.domain.Role;
+import com.dusk.user.domain.Role;
 
 /**
  * @Entity generator..Role
