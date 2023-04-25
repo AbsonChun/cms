@@ -15,6 +15,7 @@
         <module>cloud-api-commons</module>
         <module>cloud-user-8001</module>
         <module>cloud-article-8101</module>
+        <module>cloud-gataway-8999</module>
     </modules>
 
 

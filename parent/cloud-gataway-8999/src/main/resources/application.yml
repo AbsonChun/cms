@@ -1,9 +1,9 @@
 server:
-  port: 9999
+  port: 8999
 
 spring:
   application:
-    name: eureka-server
+    name: gataway-server
 
 eureka:
   client:
