@@ -4,18 +4,19 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
- * 
  * @TableName menu
  */
-@TableName(value ="menu")
+@TableName(value = "menu")
 @Data
 public class Menu implements Serializable {
     /**
-     * 
+     *
      */
     @TableId(type = IdType.AUTO)
     private Integer id;
@@ -71,13 +72,13 @@ public class Menu implements Serializable {
         }
         Menu other = (Menu) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getCode() == null ? other.getCode() == null : this.getCode().equals(other.getCode()))
-            && (this.getLevel() == null ? other.getLevel() == null : this.getLevel().equals(other.getLevel()))
-            && (this.getParentId() == null ? other.getParentId() == null : this.getParentId().equals(other.getParentId()))
-            && (this.getUrl() == null ? other.getUrl() == null : this.getUrl().equals(other.getUrl()))
-            && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
-            && (this.getOrder() == null ? other.getOrder() == null : this.getOrder().equals(other.getOrder()));
+                && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
+                && (this.getCode() == null ? other.getCode() == null : this.getCode().equals(other.getCode()))
+                && (this.getLevel() == null ? other.getLevel() == null : this.getLevel().equals(other.getLevel()))
+                && (this.getParentId() == null ? other.getParentId() == null : this.getParentId().equals(other.getParentId()))
+                && (this.getUrl() == null ? other.getUrl() == null : this.getUrl().equals(other.getUrl()))
+                && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
+                && (this.getOrder() == null ? other.getOrder() == null : this.getOrder().equals(other.getOrder()));
     }
 
     @Override

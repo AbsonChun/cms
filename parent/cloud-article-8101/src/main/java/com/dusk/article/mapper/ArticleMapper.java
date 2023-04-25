@@ -14,8 +14,8 @@ public interface ArticleMapper extends BaseMapper<Article> {
     Article getArticleById(@Param("id") Integer id, @Param("type") Integer type, @Param("user_id") Integer user_id);
 
     /**
-     * @param status 状态
-     * @param pageNum 页数 从0 开始
+     * @param status    状态
+     * @param pageNum   页数 从0 开始
      * @param pageCount 每页条数
      * @return
      */
@@ -23,6 +23,7 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     /**
      * 保存文章，返回新保存的文章
+     *
      * @param article
      * @return
      */

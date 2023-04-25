@@ -5,14 +5,14 @@
 <mapper namespace="com.dusk.user.mapper.MenuMapper">
 
     <resultMap id="BaseResultMap" type="com.dusk.user.domain.Menu">
-            <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="code" column="code" jdbcType="VARCHAR"/>
-            <result property="level" column="level" jdbcType="INTEGER"/>
-            <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
-            <result property="url" column="url" jdbcType="VARCHAR"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="order" column="order" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="code" column="code" jdbcType="VARCHAR"/>
+        <result property="level" column="level" jdbcType="INTEGER"/>
+        <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="order" column="order" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -26,6 +26,6 @@
     </select>
 
     <select id="getMenuListByLevelAndStatus" resultType="com.dusk.user.domain.Menu">
-        select m.* from menu m where  m.level = #{level} and m.status = #{status} order by m.order asc
+        select m.* from menu m where m.level = #{level} and m.status = #{status} order by m.order asc
     </select>
 </mapper>

@@ -5,17 +5,17 @@
 <mapper namespace="com.dusk.article.mapper.ArticleMapper">
 
     <resultMap id="BaseResultMap" type="com.dusk.article.domain.Article">
-            <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="title" column="title" jdbcType="VARCHAR"/>
-            <result property="keyword" column="keyword" jdbcType="VARCHAR"/>
-            <result property="content" column="content" jdbcType="VARCHAR"/>
-            <result property="click" column="click" jdbcType="INTEGER"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="type" column="type" jdbcType="INTEGER"/>
-            <result property="author" column="author" jdbcType="VARCHAR"/>
-            <result property="createUser" column="create_user" jdbcType="INTEGER"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="modifyTime" column="modify_time" jdbcType="TIMESTAMP"/>
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="keyword" column="keyword" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="click" column="click" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="author" column="author" jdbcType="VARCHAR"/>
+        <result property="createUser" column="create_user" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="modifyTime" column="modify_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -38,11 +38,12 @@
     </select>
 
     <select id="getArticleListByStatusAndPageNum" resultType="com.dusk.article.domain.Article">
-        select * from article a where  a.status = #{status} limit #{pageNum},#{pageCount}
+        select * from article a where a.status = #{status} limit #{pageNum},#{pageCount}
     </select>
 
-    <insert  id="saveArticleEdit" useGeneratedKeys="true" keyProperty="id" parameterType="com.dusk.article.domain.Article">
+    <insert id="saveArticleEdit" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.dusk.article.domain.Article">
         insert into article(title,keyword,content,click,status,type,create_user,create_time,modify_time)
-          values(#{title},#{keyword},#{content},#{click},#{status},#{type},#{createUser},now(),now())
-    </insert >
+        values(#{title},#{keyword},#{content},#{click},#{status},#{type},#{createUser},now(),now())
+    </insert>
 </mapper>

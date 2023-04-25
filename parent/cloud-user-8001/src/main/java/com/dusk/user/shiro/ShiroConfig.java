@@ -20,13 +20,13 @@ public class ShiroConfig {
     /**
      * ShiroDialect，为了在thymeleaf里使用shiro的标签的bean
      * 开启thymeleaf模板访问，注释则使用配置的jsp或者HTML访问模式
+     *
      * @return
      */
 //	@Bean
 //	public ShiroDialect shiroDialect() {
 //		return new ShiroDialect();
 //	}
-
     @Bean
     public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {
         System.out.println("--------ShiroConfiguration.shirFilter()");
@@ -36,7 +36,7 @@ public class ShiroConfig {
         // 如果不设置默认会自动寻找Web工程根目录下的"/index.jsp"页面
         shiroFilterFactoryBean.setLoginUrl("/loginController/login.do");
         // 登录成功后要跳转的链接
-         shiroFilterFactoryBean.setSuccessUrl("/indexController/index.do");
+        shiroFilterFactoryBean.setSuccessUrl("/indexController/index.do");
         // 添加shiro内置过滤器
         /**
          * anon:表示可以匿名使用。 authc:表示需要认证(登录)才能使用，没有参数
@@ -131,6 +131,7 @@ public class ShiroConfig {
 
     /**
      * 开启shiro aop注解支持. 使用代理方式;所以需要开启代码支持;
+     *
      * @param securityManager
      * @return
      */

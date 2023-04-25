@@ -5,14 +5,14 @@
 <mapper namespace="com.dusk.user.mapper.PermissionMapper">
 
     <resultMap id="BaseResultMap" type="com.dusk.user.domain.Permission">
-            <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="code" column="code" jdbcType="VARCHAR"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="createUser" column="create_user" jdbcType="INTEGER"/>
-            <result property="modifyTime" column="modify_time" jdbcType="TIMESTAMP"/>
-            <result property="modifyUser" column="modify_user" jdbcType="INTEGER"/>
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="code" column="code" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="createUser" column="create_user" jdbcType="INTEGER"/>
+        <result property="modifyTime" column="modify_time" jdbcType="TIMESTAMP"/>
+        <result property="modifyUser" column="modify_user" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">

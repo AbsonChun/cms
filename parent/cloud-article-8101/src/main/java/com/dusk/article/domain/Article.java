@@ -3,15 +3,18 @@ package com.dusk.article.domain;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * 文章表
+ *
  * @TableName article
  */
-@TableName(value ="article")
+@TableName(value = "article")
 @Data
 public class Article implements Serializable {
     /**

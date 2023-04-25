@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 前后端数据分离统一格式进行传参
+ *
  * @param <T>
  */
 @Data
@@ -21,7 +22,7 @@ public class CommonResult<T> {
 
 
     //有时候我们并不需要传递数据，因此我们可以设置一个data为空的构造方法
-    public CommonResult(Integer code,String message){
-        this(code,message,null);
+    public CommonResult(Integer code, String message) {
+        this(code, message, null);
     }
 }

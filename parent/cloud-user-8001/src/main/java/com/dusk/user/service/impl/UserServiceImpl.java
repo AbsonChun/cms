@@ -20,13 +20,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     private UserMapper userMapper;
 
-    public User getById(Integer id){
+    public User getById(Integer id) {
         return userMapper.getById(id);
     }
 
-    public Set<Role> getRoleSetByUserId(Integer userId){return userMapper.getRoleSetByUserId(userId);}
+    public Set<Role> getRoleSetByUserId(Integer userId) {
+        return userMapper.getRoleSetByUserId(userId);
+    }
 
-    public Set<Permission> getPermissionSetByUserId(Integer userId){return userMapper.getPermissionSetByUserId(userId);}
+    public Set<Permission> getPermissionSetByUserId(Integer userId) {
+        return userMapper.getPermissionSetByUserId(userId);
+    }
 }
 
 
